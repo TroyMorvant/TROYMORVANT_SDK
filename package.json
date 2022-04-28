@@ -16,6 +16,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+    "graph:all": "node dependency_helper.js",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "LOTR_API_KEY=${LOTR_API_KEY} jest --verbose --coverage",
     "test:watch": "LOTR_API_KEY=${LOTR_API_KEY} jest --verbose --watch",
