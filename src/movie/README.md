@@ -2,7 +2,7 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://external-preview.redd.it/AiYoVzLHNgLQx1_PT3Qc6v2zrIh-hKdPSMXiWydw5Ro.jpg?auto=webp&s=6ea55c56a8a6360947816e0ac8fb7569c3e923e5" width="100%" alt="Nest Logo" /></a>
 </p>
 
-# CHAPTER API
+# MOVIE API
 ## Description
 
 This API provides easy access to all sorts of information relating to chapters from the LOTR Books
