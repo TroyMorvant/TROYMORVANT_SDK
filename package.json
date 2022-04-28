@@ -2,7 +2,7 @@
   "name": "@troymorvant/troymorvant_sdk",
   "version": "0.0.1",
   "description": "SDK To Rule Them All",
-  "repository": "https://github.com/troymorvant/troymorvant_sdk.git",
+  "repository": "https://github.com/TroyMorvant/TROYMORVANT_SDK.git",
   "author": "Troy Morvant <troy@haulwith.us>",
   "private": false,
   "main": "dist/index.js",
