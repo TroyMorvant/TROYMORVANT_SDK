@@ -40,11 +40,11 @@ $ yarn install @troymorvant/TROYMORVANT_SDK
   
 ## API Reference
 
-- [Book API](./book)
-- [Chapter API](./chapter)
-- [Character API](./character)
-- [Movie API](./movie)
-- [Quote API](./quote)
+- [Book API](/src/book)
+- [Chapter API](/src/chapter)
+- [Character API](/src/character)
+- [Movie API](/src/movie)
+- [Quote API](/src/quote)
 
 ## Dependency Graph
 <p align="center">
