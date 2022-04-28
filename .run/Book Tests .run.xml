@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Book Tests " type="JavaScriptTestRunnerJest">
+    <config-file value="$PROJECT_DIR$/test/jest-e2e.json" />
+    <node-interpreter value="project" />
+    <node-options value="" />
+    <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+    <working-dir value="$PROJECT_DIR$" />
+    <envs>
+      <env name="LOTR_API_KEY" value="4cFPy6511sdScac4PJEM" />
+    </envs>
+    <scope-kind value="TEST_FILE" />
+    <test-file value="$PROJECT_DIR$/test/book.e2e-spec.ts" />
+    <method v="2" />
+  </configuration>
+</component>

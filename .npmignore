@@ -1,0 +1,9 @@
+.env
+/.idea/
+/.github/
+.nvmrc
+.prettierignore
+.prettierrc
+.releaserc
+/.run/
+/src/

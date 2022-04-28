@@ -1,0 +1,97 @@
+{
+  "name": "@troymorvant/troymorvant_sdk",
+  "version": "0.0.1",
+  "description": "SDK To Rule Them All",
+  "repository": "https://github.com/troymorvant/troymorvant_sdk.git",
+  "author": "Troy Morvant <troy@haulwith.us>",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist && npx barrelsby@latest -D -q -d ./src -l all -e \"base.resource.class.ts|[aA-zZ.]*.spec.ts\"",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"libs/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "LOTR_API_KEY=${LOTR_API_KEY} jest --verbose --coverage",
+    "test:watch": "LOTR_API_KEY=${LOTR_API_KEY} jest --verbose --watch",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --verbose --runInBand",
+    "test:e2e:update": "jest --verbose --updateSnapshot --config ./test/jest-e2e.json",
+    "test:e2e": "jest --verbose --config ./test/jest-e2e.json --coverage"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "lodash": "^4.17.21",
+    "winston": "^3.7.2",
+    "zod": "^3.14.4"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "@nestjs/cli": "^8.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/express": "^4.17.13",
+    "@types/jest": "27.4.1",
+    "@types/node": "^16.0.0",
+    "@types/supertest": "^2.0.11",
+    "@types/url-parse": "^1.4.8",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "auto-changelog": "^2.4.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^27.2.5",
+    "madge": "^4.0.2",
+    "path": "^0.12.7",
+    "prettier": "^2.3.2",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^19.0.2",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.3",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5"
+  },
+  "publishConfig": {
+    "access": "public",
+    "owner": "troymorvant",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src/"
+    ]
+  }
+}
