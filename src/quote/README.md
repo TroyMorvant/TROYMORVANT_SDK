@@ -2,11 +2,10 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://external-preview.redd.it/AiYoVzLHNgLQx1_PT3Qc6v2zrIh-hKdPSMXiWydw5Ro.jpg?auto=webp&s=6ea55c56a8a6360947816e0ac8fb7569c3e923e5" width="100%" alt="Nest Logo" /></a>
 </p>
 
-# [The One API](https://the-one-api.dev/documentation) SDK
+# CHAPTER API
 ## Description
 
-This SDK is intended to make it easier to consume the [The One API](https://the-one-api.dev/documentation)
-
+This API provides easy access to all sorts of information relating to chapters from the LOTR Books
 ## Installation
 
 ```bash
@@ -18,15 +17,15 @@ $ yarn install @troymorvant/TROYMORVANT_SDK
 - Make sure you have your `LOTR_API_KEY` set in your environment variables
 - Import the desired objects into your project
     ```typescript
-    const boook = new Book();
+    const quote = new Quote();
     ```
 - (optional) Define request options and pass that to the function
   ```typescript
-  import { Book, IRequestOptions } from '@troymorvant/troymorvant_sdk';
+  import { Quote, QuoteFields, IRequestOptions } from '@troymorvant/troymorvant_sdk';
   
   const options: IRequestOptions = {
       sortOptions: {
-        property: BookFields.NAME,
+        property: QuoteFields.DIALOG,
         direction: SortDirection.DESCENDING,
       },
       pagingOptions: {
@@ -35,17 +34,8 @@ $ yarn install @troymorvant/TROYMORVANT_SDK
       },
     };
   
-  const result = Book.getBooks(options);
+  const result = quote.getQuotes(options);
   ```
-  
-## API Reference
-
-- [Book API](/book)
-- [Chapter API](/chapter)
-- [Character API](/character)
-- [Movie API](/movie)
-- [Quote API](/quote)
-
 ## Dependency Graph
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="./dependency_graph.svg" width="100%" alt="Nest Logo" /></a>
